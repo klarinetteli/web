@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="styles/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300|Roboto:100" rel="stylesheet">
     </head>
-    <body class="index">
+    <body class="vita">
 
         <div class="logo">
             <img src="images/Susanne-John.png" alt="Susanne John" />
@@ -18,25 +18,18 @@
         </div>
 
         <!-- Add your site or application content here -->
-        <div class="bigtext darktext slide-fade-in delay-short">
-            Die Sprache der Seele ist <br/>
-            <div class="play" onclick="swPlayer.toggle(); $(this).toggleClass('playing');; $(this).parent().toggleClass('playing');">Musik</div>
-            <audio id="audio1" controls sw-audio-player>
-                <source src="media/Susanne-Guido-Enrique.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-
-        <div sw-playlist for="audio1" style="margin-bottom:2em; display: none;">
-            <a onclick="swPlayer.playSong(0)">Improvisation «Alle Vögel sind schon da» <i class="fa fa-play-circle"></i></a>
-            <a onclick="swPlayer.playSong(1)">Emmentaler <i class="fa fa-play-circle"></i></a>
-            <a onclick="swPlayer.playSong(2)">Improvisation «D'Zyt isch da» <i class="fa fa-play-circle"></i></a>
-            <a onclick="swPlayer.playSong(3)">Bim Elmi z'Bi <i class="fa fa-play-circle"></i></a>
+        <div class="cv darktext">
+            <div>Weiterbildung in Improvisation bei Galina Vracheva</div>
+            <div>Meisterkurse bei Giro Feldmann</div>
+            <div>Konzerttätigkeit u.a. in Deutschland, Polen und Kuba</div>
+            <div>Stipendiatin der Ernst-Göhner-Stiftung 2000 und 2001</div>
+            <div>Künstlerische Reifeprüfung bei Hans-Dietrich Klaus in Detmold (D)</div>
+            <div>Lehrdiplomes für Klarinette bei Kurt Weber in Bern</div>
         </div>
 
         <div class= "menu darktext">
-            <a class="active" href="">Portrait</a>
-            <a href="vita.html">Vita</a>
+            <a href="index.html">Portrait</a>
+            <a class="active" href="vita.html">Vita</a>
             <a href="">Agenda</a>
             <a href="">Kontakt</a>
             <a href="">Fotos</a>

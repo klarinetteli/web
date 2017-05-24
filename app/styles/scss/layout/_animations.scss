@@ -1,0 +1,47 @@
+
+/* make keyframes that tell the start state and the end state of our object */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(100px); }
+  to { transform: translateX(0); }
+}
+.slide-in {
+    -webkit-animation: slideIn 2s forwards;
+    -moz-animation: slideIn 2s forwards;
+    animation: slideIn 2s forwards;
+}
+
+
+.slide-fade-in {
+    animation: slideIn 2s forwards, fadeIn 2s ease-in;
+}
+
+
+
+.delay-short {
+-webkit-animation-delay: 0.3s;
+-moz-animation-delay: 0.3s;
+animation-delay: 0.3s;
+}
+
+.delay-medium {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay:1.2s;
+animation-delay: 1.2s;
+}
+
+.delay-long {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}

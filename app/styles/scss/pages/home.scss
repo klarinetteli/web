@@ -1,0 +1,40 @@
+body {
+  background-repeat: no-repeat;
+  background-position:center top;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 0 5%;
+}
+
+
+body.index {
+  background-image: url(../images/Su1.jpg);
+}
+
+body.vita {
+  background-image: url(../images/Su2.jpg);
+}
+
+
+.cv {
+  padding-left: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-left: 50px;
+  border-left: 3px dotted #585858;
+}
+
+.cv > div {
+  position: relative;
+  margin: 20px 0;
+  max-width: 300px;
+}
+
+.cv > div:before {
+  content: "\f111";
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  position: absolute;
+  left: -58.5px;
+  top: 4px;
+}

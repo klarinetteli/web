@@ -3,9 +3,12 @@
 @import 'config/_mixins';
 
 //frameworks
+@import 'fontawesome/font-awesome';
 
 //global things
 @import 'general/_reset';
 @import 'layout/_main';
+@import 'layout/_animations';
 
 //pages
+@import 'pages/home';
