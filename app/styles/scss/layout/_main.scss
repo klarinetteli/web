@@ -1,5 +1,9 @@
-* {
+body {
     font-family: 'Roboto Slab', serif;
+    color: #585858;
+}
+
+a {
     color: #585858;
 }
 
@@ -63,18 +67,25 @@
     font-size: 225%;
 }
 
-.play {
+
+.button {
     display: inline-block;
     padding: 0 10px;
     border: 2px solid #585858;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 1s;
 }
 
-.play:hover {
+.button:hover {
     background-color: rgba(0, 0, 0, 0.55);
     color: #fff;
     text-shadow: none;
     cursor: pointer;
-    border-color: #fff;
+    transition: background-color 1s;
+}
+
+.button:mouseout {
 }
 
 .play:before {

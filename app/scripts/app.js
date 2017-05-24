@@ -11864,24 +11864,26 @@ swPlayer.playSong = function(ID) {
 
 // init
 $( document ).ready(function() {
-	swPlayer.elem.seekslider = $("input[sw-audio-seekslider]");
-	swPlayer.elem.player = $("[sw-audio-player]").get(0);
-	swPlayer.elem.playlist = $("[sw-playlist][for]");
-	swPlayer.elem.playlistItems = $(swPlayer.elem.playlist).find("a");
-	// swPlayer.elem.player = new Audio();
-	swPlayer.elem.title = $("[sw-audio-title]").first();
-	swPlayer.loadSong( 0 );
+	if($("[sw-audio-player]").length > 0) {
+		swPlayer.elem.seekslider = $("input[sw-audio-seekslider]");
+		swPlayer.elem.player = $("[sw-audio-player]").get(0);
+		swPlayer.elem.playlist = $("[sw-playlist][for]");
+		swPlayer.elem.playlistItems = $(swPlayer.elem.playlist).find("a");
+		// swPlayer.elem.player = new Audio();
+		swPlayer.elem.title = $("[sw-audio-title]").first();
+		swPlayer.loadSong( 0 );
+		/*
+		swPlayer.play = swPlayer.elem.player.play;
+		swPlayer.pause = swPlayer.elem.player.pause;
+		*/
+		swPlayer.toggle = function() { swPlayer.elem.player.paused ? swPlayer.elem.player.play()  :  swPlayer.elem.player.pause(); }
+		// swPlayer.elem.player.play();
 	/*
-	swPlayer.play = swPlayer.elem.player.play;
-	swPlayer.pause = swPlayer.elem.player.pause;
+		swPlayer.elem.player.ontimeupdate = function() {
+			swPlayer.elem.seekslider.val( swPlayer.elem.player.currentTime / swPlayer.elem.player.duration * 100 );
+		};
 	*/
-	swPlayer.toggle = function() { swPlayer.elem.player.paused ? swPlayer.elem.player.play()  :  swPlayer.elem.player.pause(); }
-	// swPlayer.elem.player.play();
-/*
-	swPlayer.elem.player.ontimeupdate = function() {
-		swPlayer.elem.seekslider.val( swPlayer.elem.player.currentTime / swPlayer.elem.player.duration * 100 );
-	};
-*/
+	}
 });
 
 
