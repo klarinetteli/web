@@ -46,7 +46,7 @@ gulp.task('images-deploy', function() {
     gulp.src(['app/images/**/*', '!app/images/README'])
         //prevent pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('docs/images'));
 });
 
 //compiling our Javascripts
@@ -76,7 +76,7 @@ gulp.task('scripts-deploy', function() {
                 //compress :D
                 .pipe(uglify())
                 //where we will store our finalized, compressed script
-                .pipe(gulp.dest('dist/scripts'));
+                .pipe(gulp.dest('docs/scripts'));
 });
 
 //compiling our SCSS files
@@ -134,7 +134,7 @@ gulp.task('styles-deploy', function() {
                 .pipe(concat('styles.css'))
                 .pipe(minifyCSS())
                 //where to save our final, compressed css file
-                .pipe(gulp.dest('dist/styles'));
+                .pipe(gulp.dest('docs/styles'));
 });
 
 //basically just keeping an eye on all HTML files
@@ -153,41 +153,41 @@ gulp.task('html-deploy', function() {
     gulp.src('app/*')
         //prevent pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('docs'));
 
     //grab any hidden files too
     gulp.src('app/.*')
         //prevent pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('docs'));
 
     gulp.src('app/fonts/**/*')
         //prevent pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
-        .pipe(gulp.dest('dist/fonts'));
+        .pipe(gulp.dest('docs/fonts'));
 
     //grab all of the styles
     gulp.src(['app/styles/*.css', '!app/styles/styles.css'])
         //prevent pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
-        .pipe(gulp.dest('dist/styles'));
+        .pipe(gulp.dest('docs/styles'));
 });
 
-//cleans our dist directory in case things got deleted
+//cleans our docs directory in case things got deleted
 gulp.task('clean', function() {
     return shell.task([
-      'rm -rf dist'
+      'rm -rf docs'
     ]);
 });
 
 //create folders using shell
 gulp.task('scaffold', function() {
   return shell.task([
-      'mkdir dist',
-      'mkdir dist/fonts',
-      'mkdir dist/images',
-      'mkdir dist/scripts',
-      'mkdir dist/styles'
+      'mkdir docs',
+      'mkdir docs/fonts',
+      'mkdir docs/images',
+      'mkdir docs/scripts',
+      'mkdir docs/styles'
     ]
   );
 });
