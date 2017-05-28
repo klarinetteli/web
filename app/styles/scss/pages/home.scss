@@ -6,13 +6,28 @@ body {
   padding: 0 5%;
 }
 
+body::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-position:center top;
+  background-attachment: fixed;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 
 body.index {
   background-image: url(../images/Su1.jpg);
 }
 
-body.vita {
+body.vita::after {
   background-image: url(../images/Su2.jpg);
+  background-position:right top;
 }
 
 body.kontakt {
@@ -31,7 +46,7 @@ body.kontakt .bigtext {
   padding-top: 40px;
   padding-bottom: 40px;
   margin-left: 50px;
-  border-left: 3px dotted #585858;
+  border-left: 3px dotted $primary-color;
 }
 
 .cv > div {
