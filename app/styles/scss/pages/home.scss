@@ -1,12 +1,15 @@
+html {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+
 body {
-  background-repeat: no-repeat;
-  background-position:center top;
-  background-attachment: fixed;
-  background-size: cover;
   padding: 0 5%;
 }
 
-body::after {
+html::after {
   content: "";
   background-repeat: no-repeat;
   background-position:center top;
@@ -16,25 +19,25 @@ body::after {
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
   z-index: -1;
 }
 
 
-body.index {
+html.index::after {
   background-image: url(../images/Su1.jpg);
 }
 
-body.vita::after {
+html.vita::after {
   background-image: url(../images/Su2.jpg);
   background-position:right top;
 }
 
-body.kontakt {
+html.kontakt::after {
   background-image: url(../images/Su3.jpg);
 }
 
-body.kontakt .bigtext {
+html.kontakt .bigtext {
     bottom: 15%;
 }
 

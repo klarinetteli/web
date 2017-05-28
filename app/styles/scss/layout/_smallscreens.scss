@@ -26,11 +26,11 @@ html {
 
 
 /* vita */
-body.vita::after {
+html.vita::after {
     opacity: 0.75;
 }
 
-body.vita .cv {
+html.vita .cv {
     margin-top: 80px;
 }
 
