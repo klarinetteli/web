@@ -77,3 +77,26 @@ html.kontakt .bigtext {
   left: -58.5px;
   top: 4px;
 }
+
+
+.agenda .eventlist {
+    position: absolute;
+    right: 0;
+    max-width: 500px;
+}
+
+.agenda .event {
+    margin: 20px 0;
+    padding: 10px 10px;
+    line-height: 125%;
+    text-shadow: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    /*
+    color: white;
+    */
+}
+
+.agenda .event > div:first-child {
+    font-size: 150%;
+    line-height: 110%;
+}
