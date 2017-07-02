@@ -12,7 +12,7 @@ html::after {
   right: 0;
   z-index: -1;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position:center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,17 +21,26 @@ html::after {
 
 
 html.index::after {
-  background-image: url(../images/Susanne-79.jpg);
+  background-image: url(../images/Definitiv-69.jpg);
   background-position:right center;
 }
 
 html.vita::after {
-  background-image: url(../images/Su2.jpg);
-  background-position:right top;
+  background-image: url(../images/Definitiv-37.jpg);
+  background-position:center top;
+}
+
+html.agenda::after {
+  background-image: url(../images/Definitiv-97.jpg);
 }
 
 html.kontakt::after {
-  background-image: url(../images/Su3.jpg);
+  background-image: url(../images/Definitiv-34.jpg);
+}
+
+html.fotos::after {
+  background-image: url(../images/background-61.jpg);
+  background-position:center top;
 }
 
 html.kontakt .bigtext {
@@ -46,13 +55,18 @@ html.kontakt .bigtext {
   padding-top: 40px;
   padding-bottom: 40px;
   margin-left: 50px;
+  margin-right: 20%;
   border-left: 3px dotted $primary-color;
+  max-width: 300px;
+  /*
+  position: absolute;
+  right: 0;
+  */
 }
 
 .cv > div {
   position: relative;
   margin: 20px 0;
-  max-width: 300px;
 }
 
 .cv > div:before {
