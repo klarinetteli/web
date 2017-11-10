@@ -171,6 +171,12 @@ gulp.task('html-deploy', function() {
         //prevent pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
         .pipe(gulp.dest('docs/styles'));
+
+    gulp.src('app/unitegallery/**/*')
+        //prevent pipe breaking caused by errors from gulp plugins
+        .pipe(plumber())
+        .pipe(gulp.dest('docs/unitegallery'));
+
 });
 
 //cleans our docs directory in case things got deleted
