@@ -85,6 +85,13 @@ html.kontakt .bigtext {
     max-width: 500px;
 }
 
+.agenda .eventlist h2 {
+  font-size: 150%;
+  line-height: 110%;
+  margin: 20px 0;
+  padding: 10px 10px;
+}
+
 .agenda .event {
     margin: 20px 0;
     padding: 10px 10px;
@@ -96,7 +103,8 @@ html.kontakt .bigtext {
     */
 }
 
-.agenda .event > div:first-child {
+.agenda .event > div:first-child,
+.agenda .event h3 {
     font-size: 150%;
     line-height: 110%;
 }
