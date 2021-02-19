@@ -25,6 +25,16 @@ html.index::after {
   background-position:right center;
 }
 
+html.unterrichtAnfaenger::after {
+  background-image: url(../images/Definitiv-61.jpg);
+  background-position:center top;
+}
+
+html.unterrichtFortgeschrittene::after {
+  background-image: url(../images/Definitiv-61.jpg);
+  background-position:center top;
+}
+
 html.vita::after {
   background-image: url(../images/Definitiv-37.jpg);
   background-position:center top;
@@ -48,6 +58,19 @@ html.kontakt .bigtext {
 }
 
 
+.unterrichtAnfaenger .article {
+  position: absolute;
+  right: 5%;
+  max-width: 640px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.unterrichtFortgeschrittene .article {
+  position: absolute;
+  right: 5%;
+  max-width: 640px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
 
 .cv {
@@ -106,4 +129,15 @@ html.kontakt .bigtext {
 .agenda .event h3 {
     font-size: 150%;
     line-height: 110%;
+}
+
+.agenda .event a {
+/*  font-family: 'Open Sans', sans-serif;
+  font-style: italic;*/
+  color: #686d0d;
+  text-decoration: none;
+}
+
+.agenda .event a:hover {
+  text-decoration: underline;
 }
