@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Description of your project",
   "dependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.18.7",
